@@ -1,11 +1,5 @@
 #!/bin/bash
-cd Artificial-intelligence-systems
-pyenv install 3.7.10
-pyenv local 3.7.10
-python -m venv env
-source env/bin/activate
-pip install --upgrade pip
-pip install deeppavlov
-python -m deeppavlov install squad_bert
-pip install pyTelegramBotAPI
-python main.py
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc;
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc;
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc;
+exec $SHELL;
